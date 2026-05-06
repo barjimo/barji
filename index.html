@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Outils gratuits en ligne pour calculer une moyenne, compter les mots, générer un mot de passe, convertir des températures et calculer un âge exact."
+    />
+    <title>Outils Gratuits — calculateurs et générateurs simples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="brand" href="#top" aria-label="Accueil Outils Gratuits">
+          <span class="brand-mark">OG</span>
+          <span>Outils Gratuits</span>
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#outils">Outils</a>
+          <a href="#guides">Guides</a>
+          <a href="#adsense">Monétisation</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Rapide • Gratuit • Sans inscription</p>
+          <h1>Tous les outils utiles du quotidien dans un seul site.</h1>
+          <p class="hero-copy">
+            Calcule ta moyenne, compte tes mots, crée un mot de passe fort,
+            convertis une température ou trouve ton âge exact en quelques secondes.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#outils">Commencer</a>
+            <a class="button ghost" href="#guides">Voir les guides</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Statistiques du site">
+          <strong>5 outils prêts</strong>
+          <span>Ajoute un nouvel outil chaque semaine pour attirer plus de visiteurs via Google.</span>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section intro" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow">Pourquoi ça marche ?</p>
+          <h2 id="intro-title">Un site simple que les gens peuvent chercher tous les jours.</h2>
+        </div>
+        <p>
+          Les outils pratiques répondent à des besoins précis : étudiants, freelances,
+          employés et créateurs peuvent les utiliser régulièrement. Plus le site est utile,
+          plus il peut gagner du trafic naturel et devenir monétisable avec des annonces.
+        </p>
+      </section>
+
+      <section class="section first-steps" aria-labelledby="first-steps-title">
+        <div class="section-heading">
+          <p class="eyebrow">D'abord</p>
+          <h2 id="first-steps-title">Que faire en premier ?</h2>
+        </div>
+        <ol class="steps-list">
+          <li>Ouvre le fichier <strong>index.html</strong> dans ton navigateur pour voir le site.</li>
+          <li>Change le nom, l'adresse email et les textes pour les adapter à ton projet.</li>
+          <li>Publie gratuitement le dossier sur GitHub Pages, Cloudflare Pages ou Netlify.</li>
+          <li>Ajoute 5 à 10 articles utiles avant de demander Google AdSense.</li>
+        </ol>
+      </section>
+
+      <section class="section" id="outils" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <p class="eyebrow">Outils gratuits</p>
+          <h2 id="tools-title">Choisis un outil</h2>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card">
+            <h3>Calculateur de moyenne</h3>
+            <p>Ajoute tes notes et coefficients pour obtenir ta moyenne pondérée.</p>
+            <div class="tool-form">
+              <label>Notes et coefficients</label>
+              <textarea id="grades-input" rows="5" placeholder="Exemple :&#10;15,2&#10;12,1&#10;18,3"></textarea>
+              <small>Format : une ligne par note, séparée du coefficient par une virgule.</small>
+              <button class="button primary" data-tool="grades">Calculer</button>
+              <output id="grades-result" class="result">Résultat ici</output>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <h3>Compteur de mots</h3>
+            <p>Compte les mots, caractères et phrases d'un texte.</p>
+            <div class="tool-form">
+              <label for="words-input">Ton texte</label>
+              <textarea id="words-input" rows="6" placeholder="Écris ou colle ton texte ici..."></textarea>
+              <button class="button primary" data-tool="words">Compter</button>
+              <output id="words-result" class="result">0 mot • 0 caractère • 0 phrase</output>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <h3>Générateur de mot de passe</h3>
+            <p>Crée un mot de passe fort avec lettres, chiffres et symboles.</p>
+            <div class="tool-form">
+              <label for="password-length">Longueur</label>
+              <input id="password-length" type="number" min="8" max="40" value="16" />
+              <button class="button primary" data-tool="password">Générer</button>
+              <output id="password-result" class="result selectable">Mot de passe ici</output>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <h3>Calculateur d'âge</h3>
+            <p>Indique ta date de naissance pour connaître ton âge exact.</p>
+            <div class="tool-form">
+              <label for="birthday-input">Date de naissance</label>
+              <input id="birthday-input" type="date" />
+              <button class="button primary" data-tool="age">Calculer</button>
+              <output id="age-result" class="result">Âge ici</output>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <h3>Convertisseur Celsius / Fahrenheit</h3>
+            <p>Convertis rapidement une température dans les deux sens.</p>
+            <div class="tool-form inline-form">
+              <label for="temperature-input">Température</label>
+              <input id="temperature-input" type="number" value="25" />
+              <select id="temperature-scale" aria-label="Unité de départ">
+                <option value="c">Celsius vers Fahrenheit</option>
+                <option value="f">Fahrenheit vers Celsius</option>
+              </select>
+              <button class="button primary" data-tool="temperature">Convertir</button>
+              <output id="temperature-result" class="result">Résultat ici</output>
+            </div>
+          </article>
+
+          <article class="tool-card cta-card">
+            <h3>Prochain outil</h3>
+            <p>
+              Ajoute ensuite un générateur de CV, un convertisseur PDF ou un calculateur
+              salaire net/brut pour augmenter le trafic.
+            </p>
+            <a class="button ghost" href="#contact">Proposer une idée</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section guides" id="guides" aria-labelledby="guides-title">
+        <div class="section-heading">
+          <p class="eyebrow">Guides SEO</p>
+          <h2 id="guides-title">Articles à publier pour attirer Google</h2>
+        </div>
+        <div class="guide-list">
+          <article>
+            <h3>Comment calculer sa moyenne scolaire ?</h3>
+            <p>Explique les notes, coefficients, erreurs fréquentes et ajoute l'outil en bas.</p>
+          </article>
+          <article>
+            <h3>Comment choisir un mot de passe fort ?</h3>
+            <p>Donne des conseils de sécurité simples et invite à générer un mot de passe.</p>
+          </article>
+          <article>
+            <h3>Pourquoi utiliser un compteur de mots ?</h3>
+            <p>Parle des devoirs, CV, posts réseaux sociaux, blogs et limites de caractères.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section adsense" id="adsense" aria-labelledby="adsense-title">
+        <div>
+          <p class="eyebrow">Monétisation</p>
+          <h2 id="adsense-title">Prêt pour les annonces plus tard</h2>
+          <p>
+            Ce modèle contient les pages importantes et un emplacement réservé pour les
+            annonces. Avant d'activer AdSense, publie du contenu original, ajoute une
+            politique de confidentialité et vérifie que le site apporte une vraie valeur.
+          </p>
+        </div>
+        <div class="ad-placeholder" aria-label="Emplacement publicitaire exemple">
+          Espace annonce 728 × 90
+        </div>
+      </section>
+
+      <section class="section info-pages" aria-label="Pages indispensables">
+        <article>
+          <h2>À propos</h2>
+          <p>
+            Outils Gratuits aide les visiteurs à résoudre de petites tâches du quotidien
+            sans inscription, directement dans le navigateur.
+          </p>
+        </article>
+        <article>
+          <h2>Confidentialité</h2>
+          <p>
+            Les outils fonctionnent localement dans le navigateur. Aucun compte utilisateur
+            n'est demandé dans cette première version.
+          </p>
+        </article>
+        <article id="contact">
+          <h2>Contact</h2>
+          <p>
+            Pour proposer un outil ou signaler un problème :
+            <a href="mailto:contact@outilsgratuits.example">contact@outilsgratuits.example</a>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Outils Gratuits. Site de démonstration prêt à publier gratuitement.</p>
+      <a href="#top">Retour en haut</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
